@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Marketplace</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+    header {
+      background: #0d47a1;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .nav-left, nav .nav-right {
+      display: flex;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff6f00;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+    /* Hero Section */
+    .hero {
+      background: #e3f2fd;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+    .hero h2 {
+      font-size: 32px;
+      color: #0d47a1;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .hero button {
+      padding: 12px 25px;
+      font-size: 16px;
+      background: #0d47a1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .hero button:hover {
+      background: #1565c0;
+    }
+    /* Section styles */
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      color: #0d47a1;
+      border-bottom: 2px solid #0d47a1;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    /* Listing Grid */
+    .listing-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .listing-card {
+      background: #fff;
+      width: 300px;
+      margin: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s, border-color 0.3s;
+      overflow: hidden;
+    }
+    .listing-card:hover {
+      transform: scale(1.02);
+      border-color: #0d47a1;
+    }
+    .listing-card img {
+      width: 100%;
+      height: auto;
+    }
+    .listing-card .card-content {
+      padding: 15px;
+    }
+    .listing-card h3 {
+      margin: 0 0 10px;
+      color: #0d47a1;
+      font-size: 20px;
+    }
+    .listing-card p {
+      margin: 0;
+      color: #555;
+    }
+    /* Sell Your Car Section */
+    .sell-section {
+      background: #fff;
+      padding: 30px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .sell-section h2 {
+      color: #0d47a1;
+      margin-bottom: 15px;
+    }
+    .sell-section p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .sell-section button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ff6f00;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .sell-section button:hover {
+      background: #f57c00;
+    }
+    /* Footer */
+    footer {
+      background: #0d47a1;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Car Marketplace</h1>
+  </header>
+  <nav>
+    <div class="nav-left">
+      <a href="#">Home</a>
+      <a href="#buy">Buy Car</a>
+      <a href="#sell">Sell Car</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="login.html">Login / Sign In</a>
+    </div>
+  </nav>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Welcome to Car Marketplace</h2>
+      <p>Your one-stop platform to buy and sell quality cars. Find your dream car or sell yours quickly and securely!</p>
+      <button onclick="window.location.href='#buy'">Browse Cars</button>
+    </section>
+    
+    <!-- Cars for Sale Section -->
+    <section class="section" id="buy">
+      <h2>Cars for Sale</h2>
+      <div class="listing-grid">
+        <!-- Sample Car Card 1 -->
+        <div class="listing-card" data-title="Toyota Camry">
+          <img src="https://via.placeholder.com/300x180?text=Toyota+Camry" alt="Toyota Camry">
+          <div class="card-content">
+            <h3>Toyota Camry</h3>
+            <p>Price: $22,000</p>
+          </div>
+        </div>
+        <!-- Sample Car Card 2 -->
+        <div class="listing-card" data-title="Honda Accord">
+          <img src="https://via.placeholder.com/300x180?text=Honda+Accord" alt="Honda Accord">
+          <div class="card-content">
+            <h3>Honda Accord</h3>
+            <p>Price: $24,500</p>
+          </div>
+        </div>
+        <!-- Sample Car Card 3 -->
+        <div class="listing-card" data-title="Ford Mustang">
+          <img src="https://via.placeholder.com/300x180?text=Ford+Mustang" alt="Ford Mustang">
+          <div class="card-content">
+            <h3>Ford Mustang</h3>
+            <p>Price: $35,000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sell Your Car Section -->
+    <section class="section" id="sell">
+      <div class="sell-section">
+        <h2>Sell Your Car</h2>
+        <p>Looking to sell your car? List it here and reach thousands of potential buyers. It's quick, simple, and secure.</p>
+        <button onclick="alert('Redirecting to Sell Form...')">Get Started</button>
+      </div>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Car Marketplace. All rights reserved.
+  </footer>
+</body>
+</html>
